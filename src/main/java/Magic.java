@@ -14,6 +14,10 @@ public abstract class Magic extends PlayerCharacter {
     public void takeDamage(int damage){
         this.healthPoints -= icreature.defend(damage);
     }
+
+    public void castSpell() {
+        int damage = this.ispell.spell();
+    }
 }
 
 

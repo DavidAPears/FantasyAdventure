@@ -2,7 +2,8 @@
 
 public class LightningArrow implements ISpell{
     @Override
-    public String spell(int damage) {
-        return "spell has happened";
+    public int spell() {
+        int damage = 15;
+        return damage;
     }
 }
