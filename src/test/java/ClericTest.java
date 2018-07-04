@@ -37,4 +37,10 @@ public class ClericTest {
         cleric.giveHealth(1);
         assertEquals(51, cleric.getHealthPoints());
     }
+
+    @Test
+    public void hasMaxHealth() {
+        cleric.giveHealth(51);
+        assertEquals(100, cleric.getHealthPoints());
+    }
 }

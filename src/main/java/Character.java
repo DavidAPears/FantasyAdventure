@@ -2,10 +2,12 @@ public abstract class Character {
 
     private String name;
     private int healthPoints;
+    private int maxHealth;
 
     public Character(String name, int healthPoints){
         this.name = name;
         this.healthPoints = healthPoints;
+        this.maxHealth = 100;
     }
 
     public String getName(){
@@ -21,7 +23,16 @@ public abstract class Character {
     }
 
     public void giveHealth(int health){
-        this.healthPoints += health;
+        if (this.healthPoints + health <= this.maxHealth){
+            this.healthPoints += health;
+        } else {
+            this.healthPoints = maxHealth;
+        }
+
+
+
+
+
     }
 
 
