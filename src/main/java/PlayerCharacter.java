@@ -3,11 +3,13 @@ public abstract class PlayerCharacter {
     private String name;
     protected int healthPoints;
     private int maxHealth;
+    protected int treasure;
 
     public PlayerCharacter(String name, int healthPoints){
         this.name = name;
         this.healthPoints = healthPoints;
         this.maxHealth = 100;
+        this.treasure = 0;
     }
 
     public String getName(){
@@ -29,10 +31,15 @@ public abstract class PlayerCharacter {
             this.healthPoints = maxHealth;
         }
 
+    }
+
+    public void getTreasure(int treasure){
+        this.treasure += treasure;
+    }
 
 
-
-
+    public int treasure(){
+        return this.treasure;
     }
 
 

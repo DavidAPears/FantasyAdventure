@@ -34,9 +34,12 @@ public class RoomTest {
         knight = new Knight("Kenny", 99, sword);
         cleric = new Cleric("Charlie", 77, herb);
         troll = new Troll("Barry", 99);
+        treasure = new Treasure();
         room = new Room(troll);
         room.addPLayer(knight);
         room.addPLayer(cleric);
+        room2 = new Room(treasure);
+
 
     }
 
@@ -58,6 +61,15 @@ public class RoomTest {
         knight.useWeapon(troll);
         assertEquals(30, troll.getHealthPoints());
 
+    }
+
+    @Test
+    public void treasureChestTest(){
+        room2.addPLayer(knight);
+        room2.addPLayer(cleric);
+        room2.roomAction();
+        System.out.println(knight.treasure);
+        System.out.println(cleric.treasure);
     }
 
 
