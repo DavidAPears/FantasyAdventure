@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/FantasyLab.iml" filepath="$PROJECT_DIR$/.idea/modules/FantasyLab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FantasyLab_main.iml" filepath="$PROJECT_DIR$/.idea/modules/FantasyLab_main.iml" group="FantasyLab" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/FantasyLab_test.iml" filepath="$PROJECT_DIR$/.idea/modules/FantasyLab_test.iml" group="FantasyLab" />
     </modules>
   </component>
 </project>
