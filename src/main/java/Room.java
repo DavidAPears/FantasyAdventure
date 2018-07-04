@@ -17,11 +17,18 @@ public class Room {
     public void roomAction() {
         for (PlayerCharacter player : players){
             this.iroom.doAction(player);
+            if (player.getHealthPoints() <= 0){
+                this.removePlayer(player);
+            }
         }
     }
 
     public void addPLayer(PlayerCharacter player){
         players.add(player);
+    }
+
+    public void removePlayer(PlayerCharacter player){
+        players.remove(player);
     }
 
 

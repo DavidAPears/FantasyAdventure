@@ -10,5 +10,9 @@ public class Cleric extends PlayerCharacter {
 
     }
 
+    public void heal(PlayerCharacter player){
+        this.healingTool.heal(player);
+    }
+
 
 }

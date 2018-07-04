@@ -11,6 +11,7 @@ public class ClericTest {
 
     @Before
     public void before() {
+        herbs = new Herbs();
         cleric = new Cleric("Fixian Wounded", 50, herbs);
 
 
@@ -42,5 +43,11 @@ public class ClericTest {
     public void hasMaxHealth() {
         cleric.giveHealth(51);
         assertEquals(100, cleric.getHealthPoints());
+    }
+
+    @Test
+    public void canHeal(){
+        cleric.heal(cleric);
+        assertEquals(75, cleric.getHealthPoints());
     }
 }
