@@ -1,10 +1,10 @@
-public abstract class Character {
+public abstract class PlayerCharacter {
 
     private String name;
-    private int healthPoints;
+    protected int healthPoints;
     private int maxHealth;
 
-    public Character(String name, int healthPoints){
+    public PlayerCharacter(String name, int healthPoints){
         this.name = name;
         this.healthPoints = healthPoints;
         this.maxHealth = 100;

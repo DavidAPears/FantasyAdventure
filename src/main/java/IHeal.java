@@ -1,4 +1,5 @@
+
 public interface IHeal {
 
-    void heal(Character character);
+    void heal(PlayerCharacter playerCharacter);
 }

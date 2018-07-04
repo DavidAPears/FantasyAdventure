@@ -1,9 +1,11 @@
-public class Potion implements  IHeal{
+
+
+public class Potion implements IHeal {
 
     int health = 5;
     @Override
-    public void heal(Character character) {
-        character.giveHealth(health);
+    public void heal(PlayerCharacter playerCharacter) {
+        playerCharacter.giveHealth(health);
 
     }
 }

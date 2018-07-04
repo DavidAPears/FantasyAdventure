@@ -1,4 +1,6 @@
+
+
 public interface ISpell {
 
-    void spell(int damage);
+    String spell(int damage);
 }
