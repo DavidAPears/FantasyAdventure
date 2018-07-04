@@ -2,5 +2,5 @@
 
 public interface IWeapon {
 
-    void attack(int damage);
+    void attack(ITroll troll);
 }

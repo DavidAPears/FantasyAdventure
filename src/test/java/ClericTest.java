@@ -8,9 +8,13 @@ public class ClericTest {
     Cleric cleric;
     Herbs herbs;
     Potion potion;
+    Knight knight;
+    Sword sword;
+
 
     @Before
     public void before() {
+        knight = new Knight("Martin", 65, sword );
         herbs = new Herbs();
         cleric = new Cleric("Fixian Wounded", 50, herbs);
 
@@ -47,7 +51,7 @@ public class ClericTest {
 
     @Test
     public void canHeal(){
-        cleric.heal(cleric);
-        assertEquals(75, cleric.getHealthPoints());
+        cleric.heal(knight);
+        assertEquals(90, knight.getHealthPoints());
     }
 }

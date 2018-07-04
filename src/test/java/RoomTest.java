@@ -30,6 +30,7 @@ public class RoomTest {
     @Before
     public void before() {
         herb = new Herbs();
+        sword = new Sword();
         knight = new Knight("Kenny", 99, sword);
         cleric = new Cleric("Charlie", 77, herb);
         troll = new Troll("Barry", 99);
@@ -47,9 +48,19 @@ public class RoomTest {
     @Test
     public void roomAction() {
         room.roomAction();
-        cleric.heal(knight);
         assertEquals(69, knight.healthPoints);
     }
+
+    @Test
+    public void trollDamage(){
+        knight.useWeapon(troll);
+        assertEquals(65, troll.getHealthPoints());
+        knight.useWeapon(troll);
+        assertEquals(30, troll.getHealthPoints());
+
+    }
+
+
 
 //    @Test
 //    public void deadKnightLeavesRoom(){

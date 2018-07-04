@@ -1,6 +1,9 @@
 public class Sword implements IWeapon {
     @Override
-    public void attack(int damage) {
+    public void attack(ITroll troll) {
+        troll.takeDamage(35);
 
     }
-}
+
+    }
+

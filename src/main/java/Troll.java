@@ -4,7 +4,7 @@ public class Troll implements ITroll {
 
     public Troll(String name, int healthPoints) {
         this.name = name;
-        this.healthPoints = healthPoints;
+        this.healthPoints = 100;
     }
 
 
@@ -12,5 +12,16 @@ public class Troll implements ITroll {
         public void doAction (PlayerCharacter player){
             player.takeDamage(30);
         }
-    }
+
+        public void takeDamage( int damage){
+          this.healthPoints -= damage;
+        }
+
+
+        public int getHealthPoints(){
+         return this.healthPoints;
+        }
+
+
+}
 

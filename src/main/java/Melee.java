@@ -6,4 +6,8 @@ public abstract class Melee extends  PlayerCharacter{
         super(name, healthPoints);
         this.iWeapon = iweapon;
     }
+
+    public void useWeapon(ITroll troll){
+        iWeapon.attack(troll);
+    }
 }
